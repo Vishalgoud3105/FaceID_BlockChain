@@ -312,3 +312,15 @@ alternatives are documented in [`ARCHITECTURE.md`](ARCHITECTURE.md).
 
 Python 3.11.9 · FastAPI · InsightFace (ONNX Runtime, CPU) · OpenCV · web3.py 8 ·
 Solidity 0.8.24 · SerpApi Google Lens · Base Sepolia
+
+---
+
+<div align="center">
+
+**Built with 💻 and ☕ by Vishal Goud**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin)](http://www.linkedin.com/in/vishalgoud3105)
+[![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=github)](https://github.com/Vishalgoud3105)
+[![Portfolio](https://img.shields.io/badge/Portfolio-orange?style=flat)](https://vishalgoud3105.github.io/Portfolio/)
+
+</div>
