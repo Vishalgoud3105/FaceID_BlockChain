@@ -1,0 +1,58 @@
+{
+  "record": {
+    "schema": "hhgoa-task3/face-match/v1",
+    "created_at": "2026-09-06T18:35:17+00:00",
+    "image_sha256": "0x626b729bd379372719990214b63da9ce705d75dfee19b9cabc86d7e76be3338c",
+    "face": {
+      "face_hash": "0x2c20054bdd68df913ccb68bc477b809f9cbc9366d2c02ee73816e747c573c882",
+      "embedding_dim": 512,
+      "embedding_model": "insightface/buffalo_l (ArcFace)",
+      "normalisation": "L2",
+      "bbox": [
+        271.52,
+        74.41,
+        453.7,
+        340.24
+      ],
+      "det_score": 0.872026,
+      "face_count": 1,
+      "image_size": [
+        722,
+        425
+      ]
+    },
+    "match": {
+      "url": "https://www.reddit.com/r/blackmen/comments/1e1k8sd/alright_men_whats_your_thoughts_on_ishowspeed/",
+      "page_title": "Alright men what's your thoughts on ishowspeed ? : r/blackmen",
+      "host": "reddit.com",
+      "provider": "serpapi_google_lens",
+      "match_type": "google_lens/visual_matches"
+    },
+    "search": {
+      "providers_tried": [
+        "serpapi_google_lens"
+      ],
+      "total_results": 48,
+      "social_results": 39,
+      "image_url": "https://pbs.twimg.com/media/Gwt7WbvaEAAAZ-Jt?format=jpg&name=orig",
+      "image_url_check": {
+        "supplied": true,
+        "fetched": true,
+        "similarity": 1.0,
+        "verified": true
+      }
+    }
+  },
+  "record_hash": "0xaa40cfdcd4d1b6648a41e3040c13d68c872ed8a719e05274aa3313a99df2a2ab",
+  "chain": {
+    "record_id": 4,
+    "tx_hash": "0x0083c6208951a72ee3e1220b56c7b9b8f46c4a8c9b7cd01ddf0294c4ef0dc7d5",
+    "block_number": 46475717,
+    "gas_used": 234179,
+    "contract_address": "0x039E7A1234DD150522cb34a44Ca16056dC2B2daD",
+    "chain_id": 84532,
+    "chain_name": "Base Sepolia",
+    "explorer_url": "https://sepolia.basescan.org/tx/0x0083c6208951a72ee3e1220b56c7b9b8f46c4a8c9b7cd01ddf0294c4ef0dc7d5",
+    "submitter": "0xdcF01f543ADe441e2a7bD01541999b2cC28020d9"
+  }
+}

@@ -1,0 +1,27 @@
+# Secrets — never commit
+.env
+
+# venv
+faceid/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# InsightFace model cache
+~/.insightface/
+models/
+
+# Anchored records ARE committed. Judges need them: verification re-hashes a
+# record file and compares it with the blockchain, so an empty records/ would
+# break the whole verification path. They contain no secrets — only hashes, the
+# matched public URL, and public chain metadata.
+
+# Local input photos
+inputs/
+*.jpg
+*.jpeg
+*.png
+!docs/*.png

@@ -1,0 +1,52 @@
+{
+  "record": {
+    "schema": "hhgoa-task3/face-match/v1",
+    "created_at": "2026-09-05T12:37:23+00:00",
+    "image_sha256": "0x6b478bb8bf188f22e81ac9ef2a24a10830f9cebcbd48b9cb3f4ef4f40b479b95",
+    "face": {
+      "face_hash": "0xca9759b74048d8e9842771140ab2c90b02000cbc89b13713d5e77b3d16c9f1a4",
+      "embedding_dim": 512,
+      "embedding_model": "insightface/buffalo_l (ArcFace)",
+      "normalisation": "L2",
+      "bbox": [
+        137.57,
+        94.03,
+        309.53,
+        341.18
+      ],
+      "det_score": 0.831962,
+      "face_count": 1,
+      "image_size": [
+        460,
+        460
+      ]
+    },
+    "match": {
+      "url": "https://www.youtube.com/watch?v=hdVZKS_cnn0",
+      "page_title": "HumanConnections.AI Interview with Eugenia Kuyda - YouTube",
+      "host": "youtube.com",
+      "provider": "serpapi_google_lens",
+      "match_type": "google_lens/visual_matches"
+    },
+    "search": {
+      "providers_tried": [
+        "google_vision_web_detection",
+        "serpapi_google_lens"
+      ],
+      "total_results": 6,
+      "social_results": 2
+    }
+  },
+  "record_hash": "0x35ff82e270d54739cf9d457aa881fb3f66ebb28b1916542db7a5b194419056e0",
+  "chain": {
+    "record_id": 0,
+    "tx_hash": "0xfb8d8ee27c9e6d7c97bd54ab296196ba4411087ca72909d4d9d0627e237eba6c",
+    "block_number": 46421780,
+    "gas_used": 205456,
+    "contract_address": "0x039E7A1234DD150522cb34a44Ca16056dC2B2daD",
+    "chain_id": 84532,
+    "chain_name": "Base Sepolia",
+    "explorer_url": "https://sepolia.basescan.org/tx/0xfb8d8ee27c9e6d7c97bd54ab296196ba4411087ca72909d4d9d0627e237eba6c",
+    "submitter": "0xdcF01f543ADe441e2a7bD01541999b2cC28020d9"
+  }
+}

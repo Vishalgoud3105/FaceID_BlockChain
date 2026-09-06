@@ -1,0 +1,58 @@
+{
+  "record": {
+    "schema": "hhgoa-task3/face-match/v1",
+    "created_at": "2026-09-06T18:23:27+00:00",
+    "image_sha256": "0xb7ab332872b576136e0a4cf5373b6b7f4a569fc9aec1f9ab93e3058e7ce0bf46",
+    "face": {
+      "face_hash": "0xc80077d6f6d284a4c49313a148716ac03024f48a2cb1f9ecda1ac2b7b6811a0d",
+      "embedding_dim": 512,
+      "embedding_model": "insightface/buffalo_l (ArcFace)",
+      "normalisation": "L2",
+      "bbox": [
+        532.57,
+        62.41,
+        944.13,
+        598.76
+      ],
+      "det_score": 0.865063,
+      "face_count": 1,
+      "image_size": [
+        1400,
+        788
+      ]
+    },
+    "match": {
+      "url": "https://www.reddit.com/r/Spiderman/comments/q9yilj/youll_get_your_rent_when_you_fix_this_damn_door/",
+      "page_title": "You'll get your rent when you fix this DAMN DOOR : r/Spiderman",
+      "host": "reddit.com",
+      "provider": "serpapi_google_lens",
+      "match_type": "google_lens/visual_matches"
+    },
+    "search": {
+      "providers_tried": [
+        "serpapi_google_lens"
+      ],
+      "total_results": 55,
+      "social_results": 43,
+      "image_url": "https://pbs.twimg.com/media/Fksi1LHVQAA1GJU?format=jpg&name=orig",
+      "image_url_check": {
+        "supplied": true,
+        "fetched": true,
+        "similarity": 1.0,
+        "verified": true
+      }
+    }
+  },
+  "record_hash": "0x60793558b68307cb9c5f2c9ec2d30dfe1fca5ec015149481ca3ed434f2fb029e",
+  "chain": {
+    "record_id": 2,
+    "tx_hash": "0x6e70e740096fd6f4645bc50681ae5518b39aeaac0752ee1f442b959c63c11bc5",
+    "block_number": 46475362,
+    "gas_used": 234191,
+    "contract_address": "0x039E7A1234DD150522cb34a44Ca16056dC2B2daD",
+    "chain_id": 84532,
+    "chain_name": "Base Sepolia",
+    "explorer_url": "https://sepolia.basescan.org/tx/0x6e70e740096fd6f4645bc50681ae5518b39aeaac0752ee1f442b959c63c11bc5",
+    "submitter": "0xdcF01f543ADe441e2a7bD01541999b2cC28020d9"
+  }
+}
