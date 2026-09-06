@@ -122,6 +122,9 @@ python scripts/verify_standalone.py 1 records/1.json
   RESULT: VERIFIED
 ```
 
+> The `records anchored` count reflects the chain at the time this output was
+> captured. It increases with every run, so a live check today will show more.
+
 **What just happened:** the script read `recordHash` off the blockchain, independently
 recomputed the SHA-256 of `records/1.json`, and compared them. Equal means the file is
 byte-for-byte what was anchored.

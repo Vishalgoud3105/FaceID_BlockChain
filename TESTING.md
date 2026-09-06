@@ -214,6 +214,9 @@ And through `scripts/verify_standalone.py`, which imports nothing from this proj
   RESULT: VERIFIED
 ```
 
+> The `records anchored` count reflects the chain at the time this output was
+> captured. It increases with every run, so a live check today will show more.
+
 ### Measured gas costs
 
 At Base Sepolia's 0.006 gwei:
