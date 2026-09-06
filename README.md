@@ -59,7 +59,7 @@ can do this against the public RPC without any credentials.
 | Explorer | https://sepolia.basescan.org |
 | Contract | [`0x039E7A1234DD150522cb34a44Ca16056dC2B2daD`](https://sepolia.basescan.org/address/0x039E7A1234DD150522cb34a44Ca16056dC2B2daD) |
 | Deploy tx | [`0xfd8d844e...c7ca4f6`](https://sepolia.basescan.org/tx/0xfd8d844ed40476fb3b662fe7ea117f05ebea5b3d64feeedb68fe392cbc7ca4f6) |
-| Example anchored record | [`0xfb8d8ee2...37eba6c`](https://sepolia.basescan.org/tx/0xfb8d8ee27c9e6d7c97bd54ab296196ba4411087ca72909d4d9d0627e237eba6c) — record #0, `records/0.json` |
+| Anchored records | 6 (`records/0.json` … `records/5.json`), each independently verifiable |
 
 Chosen over Polygon Amoy because Polygon **deprecated its free public RPC endpoints in
 July 2026**, which would have forced an extra third-party RPC key just to reach the
@@ -270,24 +270,40 @@ deliberately rather than by default:
 ```
 backend/
 ├── app/
-│   ├── config.py           environment loading
-│   ├── face.py             InsightFace detection + ArcFace encoding
-│   ├── reverse_search.py   Google Lens (SerpApi) + social-domain filter
-│   ├── record.py           canonical JSON, hashing, storage  ← tamper-evidence core
-│   ├── chain.py            web3 write / read-back
-│   ├── pipeline.py         orchestration shared by CLI and API
-│   └── main.py             FastAPI
+│   ├── config.py               environment loading, placeholder detection
+│   ├── face.py                 InsightFace detection + ArcFace encoding
+│   ├── reverse_search.py       Google Lens (SerpApi) + social-domain filter
+│   ├── record.py               canonical JSON, hashing, storage
+│   ├── chain.py                web3 write / read-back
+│   ├── pipeline.py             orchestration shared by the CLI and the API
+│   └── main.py                 FastAPI app
 ├── contracts/
-│   ├── FaceMatchRegistry.sol
-│   └── FaceMatchRegistry.json    committed ABI + deployed address
+│   ├── FaceMatchRegistry.sol   the registry contract
+│   └── FaceMatchRegistry.json  committed ABI + deployed address
 ├── scripts/
-│   ├── deploy_contract.py    run once
-│   ├── run_pipeline.py       the CLI that gets screen-recorded
-│   └── verify_standalone.py  independent check - no keys, no project imports
-├── ARCHITECTURE.md         design rationale and research
-├── tests/                  41 offline tests
-└── records/                one JSON per anchored run
+│   ├── deploy_contract.py      compile and deploy, run once
+│   ├── run_pipeline.py         the main CLI
+│   └── verify_standalone.py    independent check, no keys or project imports
+├── tests/
+│   ├── test_record.py          hashing and tamper detection
+│   ├── test_reverse_search.py  domain filtering, no-fabrication guarantees
+│   └── test_pipeline_integration.py   full pipeline through the disk round-trip
+├── records/                    one JSON file per anchored run (0-5 committed)
+├── inputs/                     local input photos (gitignored)
+├── faceid/                     virtualenv, Python 3.11.9 (gitignored)
+├── README.md                   this file
+├── USER_GUIDE.md               setup, verification and troubleshooting
+├── TESTING.md                  test suite and captured verification output
+├── ARCHITECTURE.md             design rationale, decisions and research
+├── requirements.txt            pinned dependencies
+├── conftest.py                 lets bare `pytest` find the app package
+├── .env.example                configuration template, placeholders only
+├── .gitignore
+└── LICENSE                     MIT
 ```
+
+`.env` and `inputs/` are gitignored, so credentials and input photos never leave
+your machine.
 
 Design rationale, the research behind each dependency choice, and the rejected
 alternatives are documented in [`ARCHITECTURE.md`](ARCHITECTURE.md).
